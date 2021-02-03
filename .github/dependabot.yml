@@ -7,8 +7,12 @@ updates:
     # Check the npm registry for updates every day (weekdays)
     schedule:
       interval: "daily"
+      time: "11:30"
+      # Use Japan Standard Time (UTC +09:00)
+      timezone: "Asia/Tokyo"
     labels:
       - "ruby dependencies"
+    open-pull-requests-limit: 10
 
   - package-ecosystem: "docker"
     # Look for a `Dockerfile` in the `root` directory
@@ -16,5 +20,9 @@ updates:
     # Check for updates once a week
     schedule:
       interval: "weekly"
+      day: "monday"
+      time: "11:30"
+      # Use Japan Standard Time (UTC +09:00)
+      timezone: "Asia/Tokyo"
     labels:
       - "docker dependencies"
